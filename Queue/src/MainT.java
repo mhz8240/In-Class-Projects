@@ -11,7 +11,7 @@ class MainT {
 	@Test
 	void testSize() {
 		Queue<Integer> temp = new Queue<Integer>();
-		temp.add(5);
+		temp.add(5); 
 		temp.add(4);
 		temp.add(3);
 		assertEquals(temp.remove(), 3);
