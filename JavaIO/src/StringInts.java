@@ -15,7 +15,7 @@ public class StringInts {
 		while (scanner.hasNextLine()) {
 			num = scanner.nextInt();
 			sum += num;
-			length++;
+			length++; 
 		}
 		// print out the average
 		System.out.println((double)(sum)/length);
