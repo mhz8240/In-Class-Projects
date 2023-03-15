@@ -15,7 +15,7 @@ public class NumberofFemales {
 			String s = data.substring(5,11);
 			if (s.equals("FEMALE")) {
 				count++;
-			}
+			} 
 		}
 		System.out.println(count);
 	}
