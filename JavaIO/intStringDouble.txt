@@ -1,0 +1,6 @@
+1 Daniel 30.5
+3 Joe 40.5
+6 Kim 10
+8 Alan 5
+2 Karen 30
+0 Jessica 40

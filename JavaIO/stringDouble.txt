@@ -1,0 +1,6 @@
+Daniel 30.5
+Joe 40.5
+Kim 10
+Alan 5
+Karen 30
+Jessica 40
