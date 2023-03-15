@@ -12,7 +12,7 @@ class Main {
 	void testSize() {
 		Stack<Integer> temp = new Stack<Integer>();
 		temp.add(5);
-		temp.add(4);
+		temp.add(4); 
 		temp.add(3);
 		assertEquals(temp.remove(), 3);
 		assertEquals(2, temp.size());
