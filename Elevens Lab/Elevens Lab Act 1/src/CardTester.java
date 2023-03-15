@@ -12,7 +12,7 @@ public class CardTester {
 	 */
 	public static void main(String[] args) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		Card card1 = new Card("Spade", "King", 10);
+		Card card1 = new Card("Spade", "King", 10); 
 		System.out.println(card1.rank());
 	}
 }
