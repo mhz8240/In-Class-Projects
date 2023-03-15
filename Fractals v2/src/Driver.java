@@ -13,16 +13,16 @@ public class Driver extends JPanel implements ActionListener {
 
 	/* Attributes a.k.a. Instance Variables */
 	int w = 800, h = 800;
-	private int runs = 0;
 
 	public void paint(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D gd = (Graphics2D) g;
-		rings(gd, 350, 375, 375);
-//		triangles(g, 400, 25, 750, 0);
+//		rings(gd, 350, 375, 375);
+////		triangles(g, 400, 25, 750, 0);
+//		
+////		squares(g, 400, 400, 250, 0);
 		
-//		squares(g, 400, 400, 250, 0);
-		runs++;
+		snowflakes(gd, 400, 400, 400, 0);
 		
 
 	}// end of paint method - put code above for anything dealing with drawing -
@@ -31,6 +31,24 @@ public class Driver extends JPanel implements ActionListener {
 //		g.draw
 	
 
+	}
+	public void snowflakes(Graphics2D g, int x, int y, int size, int iteration) {
+		if (iteration == 4) {
+			return;
+		}
+		g.drawLine(x-size/2, y, x+size/2, y);
+		snowflakes(g, x-size/2, y, size/4, iteration+1);
+		snowflakes(g, x+size/2, y, size/4, iteration+1);
+		g.rotate(Math.toRadians(120), x, y);
+		g.drawLine(x-size/2, y, x+size/2, y);
+		snowflakes(g, x-size/2, y, size/4, iteration+1);
+		snowflakes(g, x+size/2, y, size/4, iteration+1);
+		g.rotate(Math.toRadians(120), x, y);
+		g.drawLine(x-size/2, y, x+size/2, y);
+		snowflakes(g, x-size/2, y, size/4, iteration+1);
+		snowflakes(g, x+size/2, y, size/4, iteration+1);
+		g.rotate(Math.toRadians(120), x, y);
+//		snowflakes(g, )
 	}
 	public void squares(Graphics g, int x, int y, int size, int iteration) {
 		if (iteration == 4) {
