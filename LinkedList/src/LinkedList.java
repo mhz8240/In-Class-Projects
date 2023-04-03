@@ -9,6 +9,7 @@ public class LinkedList {
 	public void add(Node n) {
 		if (size == 0) {
 			head = n;
+			head.prev = null;
 			size++;
 			return;
 		}
@@ -17,6 +18,7 @@ public class LinkedList {
 			curr = curr.next;
 		}
 		curr.next = n;
+		n.prev = curr;
 		size++;
 	}
 	public Node remove(int n) {
@@ -24,6 +26,7 @@ public class LinkedList {
 			Node next = head.next;
 			head.next = null;
 			head = next;
+			next.prev = null;
 		}
 		Node prev = head;
 		Node current = head.next;
@@ -32,13 +35,15 @@ public class LinkedList {
 			if (current == null) {
 				return null;
 			}
-			prev = current.next;
+			prev = prev.next;
 			current = current.next;
 			count++;
 		}
 		Node temp = current.next;
 		current.next = null;
+		current.prev = null;
 		prev.next = temp;
+		temp.prev = prev;
 		return current;
 	}
 	public Node get(int index) {
